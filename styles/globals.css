@@ -1,0 +1,300 @@
+@tailwind base;
+
+@layer base {
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    background: none;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  .gradient-radials-dual {
+    background: radial-gradient(
+        36.89% 104.36% at 4.36% 33.01%,
+        rgba(1, 148, 249, 0.14) 0%,
+        rgba(244, 1, 249, 0.14) 0.01%,
+        rgba(136, 1, 158, 0.0889583) 56.99%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      radial-gradient(
+        25% 81.77% at 84.22% 78.83%,
+        rgba(1, 148, 249, 0.14) 0%,
+        rgba(1, 148, 249, 0.14) 0.01%,
+        rgba(1, 94, 158, 0.0889583) 47.49%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      #151515;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./fonts/Satoshi-Regular.woff2") format("woff2");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./fonts/Satoshi-Medium.woff2") format("woff2");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./fonts/Satoshi-Medium.woff2") format("woff2");
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./fonts/Satoshi-Bold.woff2") format("woff2");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./fonts/Satoshi-Black.woff2") format("woff2");
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./fonts/Satoshi-Light.woff2") format("woff2");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./fonts/Satoshi-Black.woff2") format("woff2");
+    font-weight: 900;
+  }
+}
+
+@layer base {
+  html {
+    font-family: "Satoshi";
+  }
+}
+
+@tailwind utilities;
+@layer utilities {
+  .text-wrap-pretty {
+    text-wrap: pretty;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 25px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    /* background: #212121; */
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    /* background: #212121; */
+    border-radius: 100vh;
+  }
+
+  .scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #383838;
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #696969;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .word-spacing-16 {
+    word-spacing: 16px;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+b {
+  font-weight: 400;
+}
+
+ul li {
+  margin-left: 16px;
+  list-style-type: disc;
+}
+
+body {
+  background-color: #212121;
+  font-family: "Satoshi";
+  font-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  list-style-type: circle;
+  font-weight: 400;
+}
+
+.markdown a {
+  color: #0a84ff;
+}
+
+.dark .body {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.leap-logo {
+  position: absolute;
+  top: 40px;
+  left: 64px;
+  height: 64px;
+}
+
+.dark .container {
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    border-radius: 0;
+  }
+}
+
+.support {
+  position: absolute;
+  top: 720px;
+  margin: auto;
+  width: 112px;
+}
+
+#pro-tip {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+#toggle-switch::after {
+  content: "";
+  @apply absolute left-0.5 top-0.5 h-7 w-7 scale-110 transform rounded-full bg-white-100 transition duration-200;
+}
+
+#toggle-switch:checked:after {
+  content: "";
+  @apply translate-x-5 scale-110 transform;
+}
+
+.material-icons-round {
+  font-family: "Material Icons Round";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--info {
+  /* Default */
+
+  /* Orange/500 */
+  background: #ff9f0a !important;
+  /* White/100 */
+  color: #ffffff !important;
+  font-family: "Satoshi", "Helvetica", "Arial", "sans-serif";
+  /* Green/200 */
+  border: 1px solid #ff9f0a !important;
+  border-radius: 12px;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--default {
+  /* Default */
+
+  /* Orange/500 */
+  background: #ff9f0a !important;
+  /* White/100 */
+  color: #ffffff !important;
+  font-family: "Satoshi", "Helvetica", "Arial", "sans-serif";
+  /* Green/200 */
+  border: 1px solid #ff9f0a !important;
+  border-radius: 12px;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  /* Success */
+
+  /* Green/600 */
+  background: #29a874 !important;
+  /* White/100 */
+  color: #ffffff !important;
+  font-family: "Satoshi", "Helvetica", "Arial", "sans-serif";
+  /* Green/600 */
+  border: 1px solid #29a874 !important;
+  border-radius: 12px;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  /* Fail */
+
+  /* Red/600 */
+  background: #d10014 !important;
+  /* White/100 */
+  color: #ffffff !important;
+  font-family: "Satoshi", "Helvetica", "Arial", "sans-serif";
+  /* Red/600 */
+  border: 1px solid #d10014 !important;
+  border-radius: 12px;
+}
